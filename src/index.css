@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto+Slab:wght@300;400;500;600&family=Syne:wght@400;500;600;700&family=Alex+Brush&family=Mrs+Saint+Delafield&family=Sacramento&family=Orbitron:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-signature {
+    font-family: 'Alex Brush', 'Mrs Saint Delafield', 'Sacramento', cursive;
+  }
+  
+  .font-est {
+    font-family: 'Orbitron', 'Jost', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Jost', sans-serif;
+    color: #5F6973;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #184341;
+    font-family: 'Jost', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Section label style */
+  .section-label {
+    @apply inline-flex items-center gap-3 text-xs font-semibold tracking-[0.1em] uppercase text-[#5F6973] mb-4;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background-color: #184341;
+  }
+
+  /* Hover image zoom */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+
+  .img-zoom img {
+    @apply transition-transform duration-700 ease-in-out;
+  }
+
+  .img-zoom:hover img {
+    @apply scale-105;
+  }
+
+  /* Animated underline button */
+  .btn-underline {
+    @apply relative inline-flex items-center gap-2 text-sm font-medium text-[#184341] pb-0.5;
+  }
+
+  .btn-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-[#184341] transition-transform duration-300 origin-left;
+  }
+
+  .btn-underline:hover::after {
+    @apply scale-x-0;
+  }
+
+  /* Primary solid button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-[#184341] text-white text-sm font-medium px-7 py-4 rounded-[4px] transition-all duration-300 hover:bg-[#0f2d2b] hover:shadow-lg;
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-[#184341] text-[#184341] text-sm font-medium px-7 py-4 rounded-[4px] transition-all duration-300 hover:bg-[#184341] hover:text-white;
+  }
+
+  /* Card hover */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Fade animations */
+  .animate-fade-up {
+    animation: fadeUpAnim 0.9s ease forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeInAnim 0.8s ease forwards;
+  }
+
+  /* Gradient overlay */
+  .hero-gradient {
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%);
+  }
+
+  /* Watermark text */
+  .watermark-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 189px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -0.018em;
+    color: #F5F7F7;
+    opacity: 0.8;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* Divider line small */
+  .divider-sm {
+    @apply w-7 h-px bg-[#184341] inline-block;
+  }
+
+  /* Light bg section */
+  .section-light {
+    background-color: #F5F7F7;
+  }
+
+  /* Scrollbar hide */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes fadeUpAnim {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInAnim {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Booking form */
+.booking-form-field {
+  @apply flex flex-col justify-center px-6 py-0 h-[72px] border-r border-white/20 cursor-pointer hover:bg-white/10 transition-colors duration-200;
+}
+
+.booking-form-label {
+  @apply text-[10px] font-bold tracking-[0.1em] uppercase text-[#A7A7A7] mb-1;
+}
+
+.booking-form-input {
+  @apply text-white font-bold text-base bg-transparent border-none outline-none w-full placeholder-white/60;
+}
+
+/* Room listing hover */
+.room-item {
+  @apply border-b border-[#D3D2D2] transition-all duration-500;
+}
+
+.room-item:hover .room-item-image-overlay {
+  opacity: 1 !important;
+}
+
+/* Amenity card */
+.amenity-card {
+  @apply flex flex-col items-center text-center p-10 bg-[#F5F7F7] rounded-[4px] transition-all duration-300 cursor-pointer;
+}
+
+.amenity-card:hover {
+  @apply bg-[#184341];
+}
+
+.amenity-card:hover h3 {
+  @apply text-white;
+}
+
+.amenity-card:hover svg {
+  @apply text-white;
+}
+
+/* Nav link underline animation */
+.nav-link {
+  @apply relative text-[11px] tracking-[0.08em] uppercase font-medium transition-colors duration-300;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Pulse animation for stats counter */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Infinite scroll / marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 20s linear infinite;
+}
+
+/* Gallery mosaic hover */
+.gallery-item {
+  @apply overflow-hidden relative cursor-pointer;
+}
+
+.gallery-item img {
+  @apply w-full h-full object-cover transition-transform duration-700;
+}
+
+.gallery-item:hover img {
+  @apply scale-110;
+}
+
+.gallery-item .gallery-overlay {
+  @apply absolute inset-0 bg-[#184341]/0 transition-all duration-500 flex items-center justify-center;
+}
+
+.gallery-item:hover .gallery-overlay {
+  @apply bg-[#184341]/50;
+}
