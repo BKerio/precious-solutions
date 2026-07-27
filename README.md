@@ -58,7 +58,7 @@ Website: [https://www.precioussolution.co.ke/](https://www.precioussolution.co.k
 - **Address**: Manga House, Ground Floor, Kiambere Road, Upperhill, Nairobi, Kenya
 - **Phone**: [+254 717 662503](tel:+254717662503)
 - **Email**: [info@precioussolution.co.ke](mailto:info@precioussolution.co.ke)
-- **Location Map**: [Google Maps Link](https://www.google.com/maps?q=Kiambere+Road,+Upperhill,+Manga+Hse,+Ground+Floor)tt
+- **Location Map**: [Google Maps Link](https://www.google.com/maps?q=Kiambere+Road,+Upperhill,+Manga+Hse,+Ground+Floor)
 
 ---
 
