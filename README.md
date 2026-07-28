@@ -8,7 +8,7 @@ Website: [https://www.precioussolution.co.ke/](https://www.precioussolution.co.k
 
 ---
 
-## 🌟 Core Service Pillars 999
+## 🌟 Core Service Pillars
 
 1. **Procurement & Supply Solutions**
    - ICT equipment and accessories
